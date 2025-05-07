@@ -1,5 +1,7 @@
+// app/page.tsx or app/HomePage.tsx
 'use client';
 import { useEffect, useState } from 'react';
+import { Product } from './type';
 import ProductCard from './components/ProductCard';
 import Header from './components/Header';
 import SectionHeading from './components/SectionHeading';
@@ -7,7 +9,7 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 
 export default function HomePage() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortOption, setSortOption] = useState('Recommended');
 
