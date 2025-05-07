@@ -1,10 +1,11 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import React from 'react'; 
 
 export default function SignUpPage() {
     const router = useRouter();
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         router.push('/signIn');
     };
